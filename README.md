@@ -2,7 +2,7 @@
 
   <!-- Dynamic Typing Headline -->
   <a href="https://github.com/HarshitGaur08">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=550&lines=Cloud+Architect+%7C+AWS+%26+Distributed+Systems;AI+%2F+ML+Engineer+%7C+Deep+Learning+%26+LLMs;Automating+Scalable+Cloud+Pipelines" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=550&lines=mCloud+Architect+%7C+AWS+%26+Distributed+Systems;AI+%2F+ML+Engineer+%7C+Deep+Learning+%26+LLMs;Automating+Scalable+Cloud+Pipelines" alt="Typing SVG" />
   </a>
 
   <br/><br/>
