@@ -127,22 +127,6 @@ The image runs as a non-root user. The model weights are downloaded on startup
 and cached in the mounted Hugging Face cache. Use an appropriately sized host
 or GPU-enabled runtime for the selected model.
 
-## SAP integration notes
-
-The `d` envelope and entity metadata follow the familiar SAP Gateway OData V2
-JSON convention, making the response straightforward for an ABAP HTTP/OData
-consumer to deserialize. For a real SAP BTP or S/4HANA deployment:
-
-1. Place the service behind an authenticated API gateway and require TLS.
-2. Configure SAP BTP destinations and OAuth 2.0 / client-certificate
-   authentication according to the tenant's integration policy.
-3. Map this response to the target CDS/OData entity and apply SAP-side business
-   validation, authorization, duplicate detection, and idempotency controls.
-4. Treat model output as untrusted extraction, not an automatically approved
-   accounting entry. Add human review for low-confidence or incomplete results.
-
-No SAP credentials, tenant-specific URLs, or external services are required to
-run the local API.
 
 ## Tests
 
