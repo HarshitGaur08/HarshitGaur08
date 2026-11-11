@@ -24,6 +24,11 @@ When I'm not building pipelines or working with , you can find me optimizing alg
 
 <br/>
 
+### 🧾 Featured Project
+- [Enterprise Invoice Extraction API](./projects/invoice-extraction-api/) — FastAPI, Hugging Face vision-language inference, and an SAP OData-style response contract.
+
+<br/>
+
 ### 🛠️ Tech Stack & Tools
 
 <div align="center">
