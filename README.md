@@ -7,7 +7,7 @@
 
 <br/>
 
-### 👋 Hi there, I'm Ansh
+### 👋 Hi there, I'm Harshit Gaur
 
 I am a **B.Tech Computer Science** undergrad driven by systematic execution and laser-like focus. My work bridges the gap between scalable cloud infrastructure, machine learning, and robust enterprise architecture. 
 
