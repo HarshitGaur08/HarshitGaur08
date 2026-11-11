@@ -94,11 +94,12 @@ When I'm not building end-to-end data pipelines, I am exploring AI workflows and
 
 **Certificate Gallery**
 <div align="center">
-  <img src="hello.png" width="32%" alt="Certificate 1" />
+  <img src="cool.png" width="32%" alt="Certificate 1" />
   <img src="hello2.png" width="32%" alt="Certificate 2" />
   <img src="hello3.png" width="32%" alt="Certificate 3" />
   <br/><br/>
   <img src="hello4.png" width="32%" alt="Certificate 4" />
   <img src="hello5.png" width="32%" alt="Certificate 5" />
   <img src="hello6.png" width="32%" alt="Certificate 6" />
+  <img src="hello.png" width="32%" alt="Certificate 3" />
 </div>
