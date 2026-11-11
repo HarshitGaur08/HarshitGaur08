@@ -25,9 +25,21 @@ When I'm not building end-to-end data pipelines, I am exploring AI workflows and
 <br/>
 
 ### 💻 Featured Projects
-- [Invoice Extraction API](https://github.com/HarshitGaur08/invoice-extraction-api) — FastAPI and Hugging Face vision-language inference for structured document extraction.
-- [Distributed RAG System](https://github.com/HarshitGaur08/distributed-rag) — document ingestion, local vector search, and grounded question answering.
-- [Algorithmic Trading Backtester](https://github.com/HarshitGaur08/trading-backtester) — a vectorized strategy engine with a persistent asynchronous job API.
+
+#### 🧾 [Invoice Extraction API](https://github.com/HarshitGaur08/invoice-extraction-api)
+An AI-powered document processing API that extracts vendor, invoice number, dates, currency, subtotal, tax, and total from invoice images and PDFs. Includes bounded upload and PDF handling, structured response validation, health checks, and Docker support.
+
+**Stack:** Python · FastAPI · PyTorch · Hugging Face Transformers · Docker
+
+#### 📚 [Distributed RAG System](https://github.com/HarshitGaur08/distributed-rag)
+A document Q&A system that ingests PDF, Markdown, and text files, stores source documents through a local/S3-compatible storage adapter, indexes chunks in ChromaDB, and answers questions with retrieved context and source citations. Includes a query API and Kubernetes deployment manifests.
+
+**Stack:** Python · FastAPI · LangChain · Hugging Face · ChromaDB · AWS S3/boto3 · Kubernetes
+
+#### 📈 [Algorithmic Trading Backtester](https://github.com/HarshitGaur08/trading-backtester)
+A vectorized moving-average strategy backtester with next-bar signal execution, configurable transaction costs, and return/risk metrics. A REST API submits backtests as asynchronous jobs, persists job state in SQLite, and processes work with a bounded worker pool.
+
+**Stack:** Python · NumPy · Pandas · FastAPI · SQLite · Docker
 
 <br/>
 
@@ -57,7 +69,7 @@ When I'm not building end-to-end data pipelines, I am exploring AI workflows and
 
 <br/>
 
-### 💻 Featured Projects
+### 🧩 Other Projects
 - 📰 **Fake News Detector:** Developed a web-based machine learning application to classify news content as fake or genuine, using Python for backend logic and achieving 65%+ NLP classification accuracy[cite: 2].
 - 🎨 **AI-Powered Text-to-Image Generator:** Created an end-to-end web application that generates images from text prompts using an AI-powered workflow, integrating Python backend logic with a structured frontend interface[cite: 2].
 - 📈 **Business Data Analytics Pipeline:** Performed comprehensive data cleaning and exploratory data analysis to identify actionable insights, utilizing SQL, Excel, and Power BI for interactive reporting and business-oriented dashboard views[cite: 2].
