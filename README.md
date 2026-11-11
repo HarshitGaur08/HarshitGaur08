@@ -83,3 +83,22 @@ When I'm not building end-to-end data pipelines, I am exploring AI workflows and
 <div align="center">
   <i>"Transforming data into actionable intelligence."</i>
 </div>
+
+
+
+### 🏆 Certifications & Milestones
+- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026)[cite: 2]
+- 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage)[cite: 2].
+
+<br/>
+
+**Certificate Gallery**
+<div align="center">
+  <img src="hello.png" width="32%" alt="Certificate 1" />
+  <img src="hello2.png" width="32%" alt="Certificate 2" />
+  <img src="hello3.png" width="32%" alt="Certificate 3" />
+  <br/><br/>
+  <img src="hello4.png" width="32%" alt="Certificate 4" />
+  <img src="hello5.png" width="32%" alt="Certificate 5" />
+  <img src="hello6.png" width="32%" alt="Certificate 6" />
+</div>
