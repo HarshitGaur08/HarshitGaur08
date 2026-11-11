@@ -9,7 +9,7 @@
 
 ### 👋 Hi there, I'm Harshit Gaur
 
-I am a **final-year Computer Science Engineering student specializing in Data Science**[cite: 2], driven by systematic execution and a passion for technology-driven solutions. My work bridges the gap between scalable cloud infrastructure, machine learning, and actionable business intelligence[cite: 2]. 
+I am a **final-year Computer Science Engineering student specializing in Data Science**, driven by systematic execution and a passion for technology-driven solutions. My work bridges the gap between scalable cloud infrastructure, machine learning, and actionable business intelligence. 
 
 When I'm not building end-to-end data pipelines, I am exploring AI workflows and developing machine learning models.
 
@@ -18,9 +18,9 @@ When I'm not building end-to-end data pipelines, I am exploring AI workflows and
 ---
 
 ### 🚀 What I'm Doing Right Now
-- 📊 **Data Analytics & BI:** Building data pipelines, performing EDA, and translating complex data into actionable business insights using Python, SQL, and Power BI[cite: 2].
-- ☁️ **Cloud Computing:** Architecting scalable solutions and applying my knowledge as an **AWS Certified Cloud Practitioner**[cite: 2].
-- 🧠 **Machine Learning:** Developing NLP classification models and integrating AI-powered workflows into user-facing web applications[cite: 2].
+- 📊 **Data Analytics & BI:** Building data pipelines, performing EDA, and translating complex data into actionable business insights using Python, SQL, and Power BI.
+- ☁️ **Cloud Computing:** Architecting scalable solutions and applying my knowledge as an **AWS Certified Cloud Practitioner**.
+- 🧠 **Machine Learning:** Developing NLP classification models and integrating AI-powered workflows into user-facing web applications.
 
 <br/>
 
@@ -70,15 +70,15 @@ A vectorized moving-average strategy backtester with next-bar signal execution, 
 <br/>
 
 ### 🧩 Other Projects
-- 📰 **Fake News Detector:** Developed a web-based machine learning application to classify news content as fake or genuine, using Python for backend logic and achieving 65%+ NLP classification accuracy[cite: 2].
-- 🎨 **AI-Powered Text-to-Image Generator:** Created an end-to-end web application that generates images from text prompts using an AI-powered workflow, integrating Python backend logic with a structured frontend interface[cite: 2].
-- 📈 **Business Data Analytics Pipeline:** Performed comprehensive data cleaning and exploratory data analysis to identify actionable insights, utilizing SQL, Excel, and Power BI for interactive reporting and business-oriented dashboard views[cite: 2].
+- 📰 **Fake News Detector:** Developed a web-based machine learning application to classify news content as fake or genuine, using Python for backend logic and achieving 65%+ NLP classification accuracy.
+- 🎨 **AI-Powered Text-to-Image Generator:** Created an end-to-end web application that generates images from text prompts using an AI-powered workflow, integrating Python backend logic with a structured frontend interface.
+- 📈 **Business Data Analytics Pipeline:** Performed comprehensive data cleaning and exploratory data analysis to identify actionable insights, utilizing SQL, Excel, and Power BI for interactive reporting and business-oriented dashboard views.
 
 <br/>
 
 ### 🏆 Certifications & Milestones
-- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026)[cite: 2]
-- 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage)[cite: 2].
+- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026).
+- 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage).
 
 <br/>
 
@@ -106,8 +106,8 @@ A vectorized moving-average strategy backtester with next-bar signal execution, 
 
 
 ### 🏆 Certifications & Milestones
-- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026)[cite: 2]
-- 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage)[cite: 2].
+- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026).
+- 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage).
 
 <br/>
 
