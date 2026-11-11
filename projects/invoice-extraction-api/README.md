@@ -2,14 +2,12 @@
 
 A FastAPI service that accepts invoice images or PDFs, runs a Hugging Face
 vision-language model, validates the extracted fields, and returns an
-SAP OData V2-style entity. It is designed as an integration boundary for SAP
-BTP and S/4HANA; it does not connect to an SAP tenant or persist invoices.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    Client["SAP BTP / S/4HANA<br/>or integration client"] -->|multipart PDF/image| API["FastAPI<br/>upload validation"]
+    client["SAP BTP / S/4HANA<br/>or integration client"] -->|multipart PDF/image| API["FastAPI<br/>upload validation"]
     API --> Decode["PDF/image decoder<br/>bounded page count"]
     Decode --> Model["InvoiceModel<br/>Hugging Face VLM"]
     Model --> Validate["Pydantic field validation"]
