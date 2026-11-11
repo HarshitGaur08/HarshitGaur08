@@ -18,7 +18,7 @@ When I'm not building pipelines or working with , you can find me optimizing alg
 ---
 
 ### 🚀 What I'm Doing Right Now
-- ☁️ **Architecting:** Building scalable cloud solutions and working with modern ABAP Cloud syntax, CDS Views, and SAP S/4HANA.
+- ☁️ **Architecting:** Building scalable cloud solutions and working .
 - 🧠 **Learning:** Deepening my knowledge in AI/ML model deployment and distributed cloud systems.
 - 💻 **Problem Solving:** Actively grinding data structures and algorithms. Check out my competitive programming profile on [LeetCode (anshgaurx)](https://leetcode.com/anshgaurx/).
 
