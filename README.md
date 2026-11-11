@@ -11,7 +11,7 @@
 
 I am a **B.Tech Computer Science** undergrad driven by systematic execution and laser-like focus. My work bridges the gap between scalable cloud infrastructure, machine learning, and robust enterprise architecture. 
 
-When I'm not building pipelines or working with SAP BTP, you can find me optimizing algorithmic solutions on LeetCode.
+When I'm not building pipelines or working with , you can find me optimizing algorithmic solutions on LeetCode.
 
 </div>
 
