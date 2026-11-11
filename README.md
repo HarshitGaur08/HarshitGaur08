@@ -77,7 +77,7 @@ A vectorized moving-average strategy backtester with next-bar signal execution, 
 <br/>
 
 ### 🏆 Certifications & Milestones
-- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026).
+- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026)_https://www.credly.com/badges/3cc02390-3dd0-42f2-a89a-eb9fdfbc570e.
 - 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage).
 
 <br/>
@@ -106,7 +106,7 @@ A vectorized moving-average strategy backtester with next-bar signal execution, 
 
 
 ### 🏆 Certifications & Milestones
-- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026).
+- ☁️ **AWS Certified Cloud Practitioner (CLF-C02)** - Amazon Web Services (2026)_https://www.credly.com/badges/3cc02390-3dd0-42f2-a89a-eb9fdfbc570e.
 - 💼 **Industry Job Simulations:** Selected and completed virtual Data Analytics and GenAI job simulations powered by Deloitte and Tata (Forage).
 
 <br/>
