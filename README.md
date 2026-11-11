@@ -11,16 +11,16 @@
 
 I am a **B.Tech Computer Science** undergrad driven by systematic execution and laser-like focus. My work bridges the gap between scalable cloud infrastructure, machine learning, and robust enterprise architecture. 
 
-When I'm not building pipelines or working with , you can find me optimizing algorithmic solutions on LeetCode.
+When I'm not building pipelines, I enjoy optimizing algorithms and exploring distributed systems.
 
 </div>
 
 ---
 
 ### 🚀 What I'm Doing Right Now
-- ☁️ **Architecting:** Building scalable cloud solutions and working .
+- ☁️ **Architecting:** Building scalable cloud solutions and exploring enterprise integration patterns.
 - 🧠 **Learning:** Deepening my knowledge in AI/ML model deployment and distributed cloud systems.
-- 💻 **Problem Solving:** Actively grinding data structures and algorithms. Check out my competitive programming.
+- 💻 **Problem Solving:** Actively practicing data structures and algorithms.
 
 <br/>
 
