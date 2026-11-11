@@ -1,4 +1,4 @@
-"""FastAPI service exposing invoice extraction as an SAP OData-style payload."""
+"""FastAPI service that extracts structured fields from invoice documents."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import JSONResponse
 from PIL import Image, UnidentifiedImageError
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel
 
 from app.ml_model import InvoiceFields, InvoiceModel, InvoiceModelError
 
@@ -34,26 +34,23 @@ if MAX_UPLOAD_BYTES <= 0 or MAX_PDF_PAGES <= 0:
     raise ValueError("MAX_UPLOAD_BYTES and MAX_PDF_PAGES must be positive integers")
 
 
-class ODataInvoice(BaseModel):
-    """SAP OData V2-style invoice entity."""
+class InvoiceResult(BaseModel):
+    """Normalized invoice extraction response."""
 
-    model_config = ConfigDict(populate_by_name=True)
-
-    metadata: dict[str, str] = Field(alias="__metadata")
-    DocumentId: str
-    Vendor: str | None
-    InvoiceNumber: str | None
-    DocumentDate: str | None
-    Currency: str | None
-    Amount: float | None
-    Tax: float | None
-    TotalAmount: float | None
-    PageCount: int
-    ExtractionStatus: str
+    document_id: str
+    vendor: str | None
+    invoice_number: str | None
+    invoice_date: str | None
+    currency: str | None
+    amount: float | None
+    tax_amount: float | None
+    total_amount: float | None
+    page_count: int
+    extraction_status: str
 
 
-class ODataResponse(BaseModel):
-    d: ODataInvoice
+class ExtractionResponse(BaseModel):
+    invoice: InvoiceResult
 
 
 def decode_document(content: bytes) -> list[Image.Image]:
@@ -147,7 +144,7 @@ def create_app(
     app = FastAPI(
         title="Enterprise Invoice Extraction API",
         version="1.0.0",
-        description="Extract invoice fields and return an SAP OData-compatible entity.",
+        description="Extract normalized invoice fields from a PDF or image.",
         lifespan=lifespan,
     )
     app.state.invoice_model = invoice_model
@@ -167,12 +164,12 @@ def create_app(
 
     @app.post(
         "/api/v1/invoices/extract",
-        response_model=ODataResponse,
+        response_model=ExtractionResponse,
         summary="Extract invoice fields",
     )
     async def extract_invoice(
         file: Annotated[UploadFile, File(description="Invoice PDF or image")],
-    ) -> ODataResponse:
+    ) -> ExtractionResponse:
         request_id = str(uuid.uuid4())
         try:
             content = await file.read(max_upload_bytes + 1)
@@ -211,19 +208,18 @@ def create_app(
             for name in ("vendor", "amount", "tax_amount", "total_amount")
         )
         status = "EXTRACTED" if extracted_count == 4 else "PARTIAL"
-        return ODataResponse(
-            d=ODataInvoice(
-                metadata={"type": "ZINVOICE_EXTRACTION_SRV.InvoiceExtraction"},
-                DocumentId=request_id,
-                Vendor=fields.vendor,
-                InvoiceNumber=fields.invoice_number,
-                DocumentDate=fields.invoice_date,
-                Currency=fields.currency,
-                Amount=fields.amount,
-                Tax=fields.tax_amount,
-                TotalAmount=fields.total_amount,
-                PageCount=len(pages),
-                ExtractionStatus=status,
+        return ExtractionResponse(
+            invoice=InvoiceResult(
+                document_id=request_id,
+                vendor=fields.vendor,
+                invoice_number=fields.invoice_number,
+                invoice_date=fields.invoice_date,
+                currency=fields.currency,
+                amount=fields.amount,
+                tax_amount=fields.tax_amount,
+                total_amount=fields.total_amount,
+                page_count=len(pages),
+                extraction_status=status,
             )
         )
 

@@ -24,6 +24,13 @@ When I'm not building end-to-end data pipelines, I am exploring AI workflows and
 
 <br/>
 
+### 💻 Featured Projects
+- [Invoice Extraction API](./projects/invoice-extraction-api/) — FastAPI and Hugging Face vision-language inference for structured document extraction.
+- [Distributed RAG System](./projects/distributed-rag/) — document ingestion, local vector search, and grounded question answering.
+- [Algorithmic Trading Backtester](./projects/trading-backtester/) — a vectorized strategy engine with a persistent asynchronous job API.
+
+<br/>
+
 ### 🛠️ Tech Stack & Tools
 
 <div align="center">

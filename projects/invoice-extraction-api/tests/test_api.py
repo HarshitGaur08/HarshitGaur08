@@ -36,7 +36,7 @@ def test_image_is_decoded_to_rgb() -> None:
     assert pages[0].mode == "RGB"
 
 
-def test_extract_returns_odata_entity() -> None:
+def test_extract_returns_normalized_invoice() -> None:
     buffer = BytesIO()
     Image.new("RGB", (8, 8), color="white").save(buffer, format="PNG")
     client = TestClient(create_app(FakeInvoiceModel()))
@@ -48,14 +48,11 @@ def test_extract_returns_odata_entity() -> None:
         )
 
     assert response.status_code == 200
-    payload = response.json()["d"]
-    assert payload["Vendor"] == "Example Supplies"
-    assert payload["Amount"] == 100.0
-    assert payload["Tax"] == 8.0
-    assert payload["ExtractionStatus"] == "EXTRACTED"
-    assert payload["__metadata"]["type"] == (
-        "ZINVOICE_EXTRACTION_SRV.InvoiceExtraction"
-    )
+    payload = response.json()["invoice"]
+    assert payload["vendor"] == "Example Supplies"
+    assert payload["amount"] == 100.0
+    assert payload["tax_amount"] == 8.0
+    assert payload["extraction_status"] == "EXTRACTED"
 
 
 def test_rejects_empty_file() -> None:

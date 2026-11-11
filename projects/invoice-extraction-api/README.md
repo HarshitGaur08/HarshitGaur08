@@ -1,18 +1,20 @@
-# Enterprise Invoice Extraction API
+# Invoice Extraction API
 
-A FastAPI service that accepts invoice images or PDFs, runs a Hugging Face
-vision-language model, validates the extracted fields, and returns an
+A FastAPI microservice that accepts invoice images or PDFs, runs a Hugging Face
+vision-language model, validates the extracted fields, and returns a normalized
+JSON response. This project focuses on document AI and API operations; it does
+not connect to external business systems or persist uploaded invoices.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    client["SAP BTP / S/4HANA<br/>or integration client"] -->|multipart PDF/image| API["FastAPI<br/>upload validation"]
+    Client["API client"] -->|multipart PDF/image| API["FastAPI<br/>upload validation"]
     API --> Decode["PDF/image decoder<br/>bounded page count"]
     Decode --> Model["InvoiceModel<br/>Hugging Face VLM"]
     Model --> Validate["Pydantic field validation"]
-    Validate --> OData["SAP OData V2-style<br/>JSON entity"]
-    OData --> Client
+    Validate --> Result["Normalized JSON result"]
+    Result --> Client
     API --> Health["Liveness / readiness"]
 ```
 
@@ -22,15 +24,15 @@ flowchart LR
 invoice-extraction-api/
 ├── app/
 │   ├── __init__.py
-│   ├── main.py           # FastAPI routes, validation and OData response
+│   ├── main.py           # FastAPI routes, upload validation, response models
 │   └── ml_model.py       # Hugging Face model loading and inference
 ├── tests/
 │   └── test_api.py
 ├── .dockerignore
+├── .gitignore
 ├── Dockerfile
 ├── requirements.txt
-├── requirements-dev.txt
-└── README.md
+└── requirements-dev.txt
 ```
 
 ## Requirements and setup
@@ -76,30 +78,25 @@ Successful response (fields the model cannot read or determine are `null`):
 
 ```json
 {
-  "d": {
-    "__metadata": {
-      "type": "ZINVOICE_EXTRACTION_SRV.InvoiceExtraction"
-    },
-    "DocumentId": "f378bf63-0135-4afe-b95e-a949ff5e3a79",
-    "Vendor": "Example Supplies Ltd.",
-    "InvoiceNumber": "INV-2026-1042",
-    "DocumentDate": "2026-10-10",
-    "Currency": "USD",
-    "Amount": 100.0,
-    "Tax": 8.0,
-    "TotalAmount": 108.0,
-    "PageCount": 1,
-    "ExtractionStatus": "EXTRACTED"
+  "invoice": {
+    "document_id": "f378bf63-0135-4afe-b95e-a949ff5e3a79",
+    "vendor": "Example Supplies Ltd.",
+    "invoice_number": "INV-2026-1042",
+    "invoice_date": "2026-10-10",
+    "currency": "USD",
+    "amount": 100.0,
+    "tax_amount": 8.0,
+    "total_amount": 108.0,
+    "page_count": 1,
+    "extraction_status": "EXTRACTED"
   }
 }
 ```
 
-`Amount` is the pre-tax amount; `Tax` is the tax amount; `TotalAmount` is the
-amount due. `ExtractionStatus` is `PARTIAL` when one or more of the vendor,
-amount, tax, or total fields are missing. Consumers should validate extracted
-values before posting them into a financial system.
-
-Other endpoints:
+`amount` is the pre-tax amount; `tax_amount` is the tax amount;
+`total_amount` is the amount due. `extraction_status` is `PARTIAL` when one or
+more of the vendor, amount, tax, or total fields are missing. Review and
+validate extracted values before using them in downstream workflows.
 
 | Method | Path | Purpose |
 |---|---|---|
@@ -124,7 +121,6 @@ docker run --rm -p 8000:8000 `
 The image runs as a non-root user. The model weights are downloaded on startup
 and cached in the mounted Hugging Face cache. Use an appropriately sized host
 or GPU-enabled runtime for the selected model.
-
 
 ## Tests
 
